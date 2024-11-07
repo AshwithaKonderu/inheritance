@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oops task</title>
+  </head>
+  <body>
+    <script>
+      class Restaurant {
+          constructor(Name){
+              this.Name=Name;
+             
+          }
+      
+      greet(){
+          console.log(`welcome to our ${this.Name} Restaurant`)
+      }}
+      let rest1=new  Restaurant ("chillax Restaurant")
+    
+     console.log(rest1)
+   
+     
+      class paradise extends Restaurant{
+          constructor(Name,ambience){
+              super(Name)
+           
+              this.ambience=ambience;
+          }
+      
+      greet(){
+          console.log(`welcome to our ${this.Name} Restaurant ,with the ${this.ambience}`)
+      }}
+      let rest2=new paradise ("paradise","verygood")
+      console.log(rest2)
+
+      class lucky extends paradise{
+        constructor(Name,ambience,price){
+        super(Name,ambience)
+        this.price=price
+      }
+      greeet(){
+        console.log(`welcome to our ${this.Name} Restaurant ,with the ${this.ambience} and with affordable prices staring with ${this.price}`)
+        
+      }}
+      let rest3=new lucky ("lucky restaurant","good","780")
+      console.log(rest3)
+    </script>
+  </body>
+</html>
